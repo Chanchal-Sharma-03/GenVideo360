@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Generation Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Video Generation Tool</h1>
+
+        <div class="section">
+            <h2>1. Pick a Topic</h2>
+            <p>Enter a news topic or trending hashtag to generate a video.</p>
+            <input type="text" id="topicInput" placeholder="e.g., AI advancements, Climate Change solutions">
+            <button id="getTopicContentBtn">Get Content</button>
+            <div id="loadingTopic" class="loading-spinner" style="display: none;"></div>
+        </div>
+
+        <div class="section">
+            <h2>2. Generated Script</h2>
+            <p>A script will be generated based on your topic.</p>
+            <textarea id="scriptOutput" rows="8" readonly placeholder="Your script will appear here..."></textarea>
+            <button id="generateScriptBtn">Generate Script</button>
+            <div id="loadingScript" class="loading-spinner" style="display: none;"></div>
+        </div>
+
+        <div class="section">
+            <h2>3. Generated Video</h2>
+            <p>Your video will be generated here.</p>
+            <div class="video-placeholder" id="videoPlaceholder">
+                <p>Video will appear here (simulated in this prototype)</p>
+                <video id="generatedVideo" controls style="display: none; max-width: 100%;"></video>
+            </div>
+            <button id="generateVideoBtn">Generate Video</button>
+            <div id="loadingVideo" class="loading-spinner" style="display: none;"></div>
+            <a id="downloadVideoBtn" href="#" download="generated_video.mp4" style="display: none;">Download Video</a>
+        </div>
+
+        <div class="status-messages" id="statusMessages"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
